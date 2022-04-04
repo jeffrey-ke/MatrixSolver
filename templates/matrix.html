@@ -1,7 +1,30 @@
 <h1>Input your data:</h1>
+<form action="result" method = 'post' onsubmit="storeMatrix">
 {%for row in range(rows|int)%}
     {%for col in range(cols|int)%}
     <input type="number" name="cell">
     {%endfor%}
     <br>
 {%endfor%}
+<input id="values" type="hidden" name="values" value="">
+<input type="submit" value='compute'>
+</form>
+
+<script>
+    // I can use javascript to get all the form elements on this page;
+    // I can then determine which elements are in which rows and cols
+    // based on how many cols there are.
+    
+    // I want to give this array back to my python backend
+    // I can make a regular array full of the values, and see if I can just pass that back
+    function storeMatrix(){
+        let inputs = document.getElementsByName('cell') //this hands back an array of all my input cells
+        let str_in = []
+        inputs.forEach(cell => {
+            str_in.push(cell.value)
+        })
+        document.getElementById('values').value = JSON.stringify(str_in)
+
+    }
+    
+</script>

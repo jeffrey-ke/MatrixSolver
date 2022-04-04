@@ -11,5 +11,9 @@ def home():
     return render_template('home.html')
 
 @app.route('/matrix', methods=['GET', 'POST'])
-def result():
+def matrix():
     return render_template('matrix.html',rows=request.form['rows'],cols=request.form['cols'])
+
+@app.route('/result', methods=['GET', 'POST'])
+def route():
+    return "Hello" + str(request.form['values'])
