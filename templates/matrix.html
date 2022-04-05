@@ -1,5 +1,5 @@
 <h1>Input your data:</h1>
-<form action="result" method = 'post' onsubmit="storeMatrix">
+<form action="result" method = 'post' onclick="storeMatrix()">
 {%for row in range(rows|int)%}
     {%for col in range(cols|int)%}
     <input type="number" name="cell">
@@ -23,7 +23,7 @@
         inputs.forEach(cell => {
             str_in.push(cell.value)
         })
-        document.getElementById('values').value = JSON.stringify(str_in)
+        document.getElementById('values').value = str_in.join(' ') // for some reason this doesn't change the value.
 
     }
     
