@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Matrix row reducer:</h1>
+      <h2>Enter # of rows and cols:</h2>
+      <form action="matrix" method="post">
+        rows:{" "}
+        <input
+          type="number"
+          name="rows"
+          value=""
+          autofocus="autofocus"
+          required
+        ></input>
+        <br></br>
+        cols:{" "}
+        <input type="number" name="cols" value="" tabindex="0" required></input>
+        <br></br>
+        <input type="submit" value="submit"></input>
+      </form>
     </div>
   );
 }
