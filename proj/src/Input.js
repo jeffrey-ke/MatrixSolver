@@ -1,4 +1,5 @@
 function Input(props) {
+
     return (
         <div>
             <form action={props.dst} method="post">
