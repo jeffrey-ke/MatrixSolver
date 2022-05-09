@@ -1,4 +1,6 @@
-function Matrix(props){
+// import React, { useState } from "react"
+
+export default function Matrix(props){
 
     function generateMatrix(){
         const m = []
@@ -11,10 +13,12 @@ function Matrix(props){
         return m
     }
 
+
     return (
         <div>
-            {generateMatrix()}
+            { generateMatrix() }
         </div>
     )
+
+    
 }
-export default Matrix
