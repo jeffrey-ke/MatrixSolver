@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 function RowsCols(){
     const [row,setRow] = useState(2)
     const [col,setCol] = useState(2)
-    console.log("RowsCols reloaded")
     return(
         <div>
             <div>
