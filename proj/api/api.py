@@ -11,6 +11,12 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
+@app.route('/compute', methods=['POST'])
+def compute():
+    json=request.form
+    return json
+
+
 @app.route('/matrix', methods=['GET', 'POST'])
 def matrix():
     return render_template('matrix.html',rows=request.form['rows'],cols=request.form['cols'])
